@@ -51,6 +51,7 @@ helpers do
   end
 
   def winner!(msg)
+    @play_again = true
     @show_hit_or_stay_buttons = false
     @success = "<strong>#{session[:player_name]} wins!</strong> #{msg}"
   end
@@ -96,7 +97,7 @@ end
 
 get '/game' do
   session[:turn] = session[:player_name]
-  
+
   # created a deck and put it in session
   suits = ['H', 'D', 'C', 'S']
   values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
