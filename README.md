@@ -1,4 +1,4 @@
-# BlackJack Game wriiten in ruby
+# BlackJack Game writen in ruby
 
 ## To run:
 1. bundle install
